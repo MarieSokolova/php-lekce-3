@@ -25,8 +25,13 @@ $maximum = 5;
    <?php $radek = 1;
    $soucet = 1;
 while ($radek <= $maximum) {
-     
-       echo "<tr>
+     if ($radek == 2 || $radek == 4) {
+            $trida = 'class="alert-info"';
+        } else {
+            $trida = '';
+        }
+        
+       echo "<tr $trida>
             <td>$radek</td>
             <td>$soucet</td>
         </tr>"; 

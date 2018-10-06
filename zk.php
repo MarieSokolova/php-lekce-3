@@ -12,40 +12,30 @@
 <body>
 <br>
 <div class="container">
-<?php
-$klasifikace = ["čeština"=> 2, "matematika" => 1, "angličtina"=> 4, "francouzština"=> 2];
-$soucet = 0;
-$pocet = 0;
 
-
-    echo "<table class="table table-bordered">";
-    
-
-foreach ( $klasifikace as $predmet =>$znamka) {
-    $trida = '';
+    <?php
+    $predmety = ['čeština' => 2, 'matematika' => 4, 'němčina' => 1, 'ruština' => 3];
+    $soucet = 0;
+    $pocet = 0;
+    echo '<table class="table table-bordered">';
+    foreach ($predmety as $predmet => $znamka) {
+        $trida = '';
         if ($znamka > 3) {
             $trida = 'class="alert-danger"';
         }
-            echo "<tr $trida>
+        echo "<tr $trida>
             <td>$predmet</td>
             <td>$znamka</td>
         </tr>";
         $pocet = $pocet + 1;
         $soucet = $soucet + $znamka;
-               
-        }
-    echo "</table>"
-    echo "Průměr:" 
-        
-    $prumer = $soucet/$pocet;
-       echo "$prumer";
-    
+    }
+    echo '</table>';
+    echo "Průměr: ";
+    echo $soucet / $pocet;
     ?>
-  
-
-
-
 
 </div>
 </body>
 </html>
+
