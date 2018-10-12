@@ -31,13 +31,14 @@
 
 <?php
 session_start();
-$_SESSION['loggedIn'] = 'true';
-if ($_POST["Login"]=="admin" && $_POST["heslo"] == "top-secret") {
-   $_POST["Login"]="admin";
-    $_POST['data']=['Datum registrace:' => '2.4.2018', 'Souhlas s podmínkami' => 'ANO', 'Počet objednávek' => 23];
+if (isset $_POST['Login']) {
+    if ($_SESSION['Login']=="admin" && $_SESSION['heslo'] == "top-secret") {
+   $_SESSION['Login']="admin";
+   $_SESSION['data']=['Datum registrace:' => '2.4.2018', 'Souhlas s podmínkami' => 'ANO', 'Počet objednávek' => 23];
    echo '<a href="/php-lekce-3/admin.php">Pokračovat do administrace</a>';
 }  else {
    echo "Chybné jméno nebo heslo";
+}
 }
 
 ?>

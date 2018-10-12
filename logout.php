@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-unset($_SESSION['loggedIn']);
+unset($_POST['Login']);
 ?>
 
 <html lang="en">

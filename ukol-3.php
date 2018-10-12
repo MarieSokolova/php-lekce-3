@@ -13,12 +13,12 @@
 <br>
 <div class="container">
 <?php
-$klasifikace = ["čeština"=> 2, "matematika" => 1, "angličtina"=> 4, "francouzština"=> 2];
+$klasifikace = ["čeština"=> 2, "matematika" => 1, "angličtina"=> 5, "francouzština"=> 2];
 $soucet = 0;
 $pocet = 0;
 
 
-    echo "<table class="table table-bordered">";
+    echo "<table class='table table-bordered'>";
     
 
 foreach ( $klasifikace as $predmet =>$znamka) {
@@ -34,8 +34,8 @@ foreach ( $klasifikace as $predmet =>$znamka) {
         $soucet = $soucet + $znamka;
                
         }
-    echo "</table>"
-    echo "Průměr:" 
+    echo "</table>";
+    echo "Průměr: "; 
         
     $prumer = $soucet/$pocet;
        echo "$prumer";

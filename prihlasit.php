@@ -1,4 +1,4 @@
-<?php
+git merge <?php
 // nastartování session
 session_start();
 
